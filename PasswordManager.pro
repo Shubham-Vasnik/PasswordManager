@@ -18,15 +18,18 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     main.cpp \
     passwordmanager.cpp \
-    savepassword.cpp
+    savepassword.cpp \
+    seesavedpasswords.cpp
 
 HEADERS += \
     passwordmanager.h \
-    savepassword.h
+    savepassword.h \
+    seesavedpasswords.h
 
 FORMS += \
     passwordmanager.ui \
-    savepassword.ui
+    savepassword.ui \
+    seesavedpasswords.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

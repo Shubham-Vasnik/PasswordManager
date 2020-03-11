@@ -43,3 +43,10 @@ void SavePassword::on_SaveAccountBtn_clicked()
          QMessageBox::critical(this,"Error",qry.lastError().text());
     }
 }
+
+void SavePassword::on_pushButton_2_clicked()
+{
+    hide();
+    seeSavedPasswords = new SeeSavedPasswords(this);
+    seeSavedPasswords->show();
+}
