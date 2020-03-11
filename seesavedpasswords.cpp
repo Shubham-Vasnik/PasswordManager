@@ -1,6 +1,7 @@
 #include "seesavedpasswords.h"
 #include "ui_seesavedpasswords.h"
 #include "passwordmanager.h"
+#include "savepassword.h"
 
 SeeSavedPasswords::SeeSavedPasswords(QWidget *parent) :
     QMainWindow(parent),
@@ -26,4 +27,24 @@ void SeeSavedPasswords::showPassword(){
     ui->tableView->setModel(model);
     conn.connClose();
     qDebug() << (model->rowCount());
+}
+
+
+
+void SeeSavedPasswords::on_deleteAccount_clicked()
+{
+    hide();
+    del = new Delete(this);
+    del->show();
+}
+
+
+
+
+void SeeSavedPasswords::on_addAccount_clicked()
+{
+    hide();
+    SavePassword *savePassword;
+    savePassword = new SavePassword(this);
+    savePassword->show();
 }

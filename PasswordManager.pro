@@ -16,17 +16,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    delete.cpp \
     main.cpp \
     passwordmanager.cpp \
     savepassword.cpp \
     seesavedpasswords.cpp
 
 HEADERS += \
+    delete.h \
     passwordmanager.h \
     savepassword.h \
     seesavedpasswords.h
 
 FORMS += \
+    delete.ui \
     passwordmanager.ui \
     savepassword.ui \
     seesavedpasswords.ui
