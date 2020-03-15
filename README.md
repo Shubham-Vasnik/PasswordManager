@@ -17,3 +17,12 @@ Steps to run the app
 
 3.Than run the 'passwordManager.exe'file present in the 'deployedApp' folder  
 
+# Screenshots  
+
+![Alt text](/Screenshots/Screenshot_1.png?raw=true "Screenshot 1")  
+![Alt text](/Screenshots/Screenshot_2.png?raw=true "Screenshot 1")  
+![Alt text](/Screenshots/Screenshot_3.png?raw=true "Screenshot 1")  
+![Alt text](/Screenshots/Screenshot_4.png?raw=true "Screenshot 1")  
+
+
+
