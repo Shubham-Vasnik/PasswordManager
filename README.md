@@ -1,9 +1,13 @@
 # PasswordManager
 
-Simple Password Manager app that is built using Qt framework uses Sqlite database to store passwords.
-Passwords Are Stored in Encrypted Form. 
-Default Username:Shubham
-        Password:1234
+Simple Password Manager app that is built using Qt framework uses Sqlite database to store passwords.  
+
+Passwords Are Stored in Encrypted Form.  
+
+Default Username:Shubham  
+
+        Password:1234  
+        
 
 Steps to run the app
 1.Make 'sqlite' folder in your 'C' directory
