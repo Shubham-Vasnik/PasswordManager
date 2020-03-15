@@ -15,5 +15,5 @@ Steps to run the app
 
 2.Than copy the 'passwordManager.db' file in that folder  
 
-3.Than run the 'passwordManager.exe'file in the 'deployedApp' folder  
+3.Than run the 'passwordManager.exe'file present in the 'deployedApp' folder  
 
