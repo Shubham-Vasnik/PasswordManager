@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "seesavedpasswords.h"
+#include <QSqlQueryModel>
 
 
 namespace Ui {
@@ -26,5 +27,17 @@ private:
     Ui::SavePassword *ui;
     SeeSavedPasswords *seeSavedPasswords;
 };
+
+class CustomSqlModel : public QSqlQueryModel
+{
+    Q_OBJECT
+
+public:
+    CustomSqlModel(QObject *parent = nullptr);
+
+    QVariant data(const QModelIndex &item, int role) const override;
+};
+
+
 
 #endif // SAVEPASSWORD_H

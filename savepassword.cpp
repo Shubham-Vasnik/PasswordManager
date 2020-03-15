@@ -21,11 +21,12 @@ SavePassword::~SavePassword()
 
 void SavePassword::on_SaveAccountBtn_clicked()
 {
+    PasswordManager conn;
     QString newAccountName = ui->NewAccountName->text();
     QString newUserName = ui->NewUserName->text();
     QString newPassword = ui->NewPassword->text();
+    QString newEnPassword = conn.encrypt(newPassword);
 
-    PasswordManager conn;
     if(!conn.connOpen()){
         qDebug() << "Failed to open database";
         return;
@@ -33,7 +34,7 @@ void SavePassword::on_SaveAccountBtn_clicked()
 
     conn.connOpen();
     QSqlQuery qry;
-    qry.prepare("insert into account (account,username,password) values ('"+newAccountName+"','"+newUserName+"','"+newPassword+"')");
+    qry.prepare("insert into account (account,username,password) values ('"+newAccountName+"','"+newUserName+"','"+newEnPassword+"')");
 
     if(qry.exec()){
         QMessageBox::information(this,"Saved","'"+newAccountName+"' Saved");

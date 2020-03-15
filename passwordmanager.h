@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QFileInfo>
 #include "savepassword.h"
+#include <string>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class PasswordManager; }
@@ -33,6 +34,22 @@ public:
     void connClose(){
         passwordDb.close();
         passwordDb.removeDatabase(QSqlDatabase::defaultConnection);
+    }
+
+    QString encrypt(QString qstr){
+        std::string str = qstr.toStdString();
+        for(int i = 0; (i < 100 && str[i] != '\0'); i++)
+                    str[i] = str[i] + 2;
+
+        return QString::fromStdString(str);
+    }
+
+    QString decrypt(QString qstr){
+        std::string str = qstr.toStdString();
+        for(int i = 0; (i < 100 && str[i] != '\0'); i++)
+                    str[i] = str[i] - 2;
+
+        return QString::fromStdString(str);
     }
 
 public:
